@@ -1,0 +1,188 @@
+[
+  {
+    "$type": "MyWebChat.Models.Message, MyWebChat",
+    "Id": 0,
+    "UserFrom": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 10,
+      "FirstName": "Milos",
+      "LastName": "Srejić",
+      "Email": "milos0604@hotmail.com",
+      "Password": "kbyaWVjY8no=",
+      "ImagePath": "/Images/milos_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:31:09.293"
+    },
+    "UserFromId": 10,
+    "UserTo": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 9,
+      "FirstName": "Milovan",
+      "LastName": "Srejić",
+      "Email": "srejicmilovan@gmail.com",
+      "Password": "y2+Y0DPZ9l+UtnTkDMfiYg==",
+      "ImagePath": "/Images/milovan_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:17:13.097"
+    },
+    "UserToId": 9,
+    "MessageText": "eeee",
+    "DateTimeSend": "2019-10-12T19:11:46.1431688+02:00",
+    "ReadMessage": true
+  },
+  {
+    "$type": "MyWebChat.Models.Message, MyWebChat",
+    "Id": 0,
+    "UserFrom": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 9,
+      "FirstName": "Milovan",
+      "LastName": "Srejić",
+      "Email": "srejicmilovan@gmail.com",
+      "Password": "y2+Y0DPZ9l+UtnTkDMfiYg==",
+      "ImagePath": "/Images/milovan_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:17:13.097"
+    },
+    "UserFromId": 9,
+    "UserTo": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 10,
+      "FirstName": "Milos",
+      "LastName": "Srejić",
+      "Email": "milos0604@hotmail.com",
+      "Password": "kbyaWVjY8no=",
+      "ImagePath": "/Images/milos_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:31:09.293"
+    },
+    "UserToId": 10,
+    "MessageText": "eeeee",
+    "DateTimeSend": "2019-10-12T19:11:50.6664977+02:00",
+    "ReadMessage": true
+  },
+  {
+    "$type": "MyWebChat.Models.Message, MyWebChat",
+    "Id": 0,
+    "UserFrom": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 10,
+      "FirstName": "Milos",
+      "LastName": "Srejić",
+      "Email": "milos0604@hotmail.com",
+      "Password": "kbyaWVjY8no=",
+      "ImagePath": "/Images/milos_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:31:09.293"
+    },
+    "UserFromId": 10,
+    "UserTo": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 9,
+      "FirstName": "Milovan",
+      "LastName": "Srejić",
+      "Email": "srejicmilovan@gmail.com",
+      "Password": "y2+Y0DPZ9l+UtnTkDMfiYg==",
+      "ImagePath": "/Images/milovan_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:17:13.097"
+    },
+    "UserToId": 9,
+    "MessageText": "sta radis",
+    "DateTimeSend": "2019-10-12T19:12:02.1733434+02:00",
+    "ReadMessage": true
+  },
+  {
+    "$type": "MyWebChat.Models.Message, MyWebChat",
+    "Id": 0,
+    "UserFrom": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 10,
+      "FirstName": "Milos",
+      "LastName": "Srejić",
+      "Email": "milos0604@hotmail.com",
+      "Password": "kbyaWVjY8no=",
+      "ImagePath": "/Images/milos_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:31:09.293"
+    },
+    "UserFromId": 10,
+    "UserTo": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 9,
+      "FirstName": "Milovan",
+      "LastName": "Srejić",
+      "Email": "srejicmilovan@gmail.com",
+      "Password": "y2+Y0DPZ9l+UtnTkDMfiYg==",
+      "ImagePath": "/Images/milovan_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:17:13.097"
+    },
+    "UserToId": 9,
+    "MessageText": "eeeeeeeeeeeeeee",
+    "DateTimeSend": "2019-10-13T16:58:11.694848+02:00",
+    "ReadMessage": false
+  },
+  {
+    "$type": "MyWebChat.Models.Message, MyWebChat",
+    "Id": 0,
+    "UserFrom": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 10,
+      "FirstName": "Milos",
+      "LastName": "Srejić",
+      "Email": "milos0604@hotmail.com",
+      "Password": "kbyaWVjY8no=",
+      "ImagePath": "/Images/milos_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:31:09.293"
+    },
+    "UserFromId": 10,
+    "UserTo": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 9,
+      "FirstName": "Milovan",
+      "LastName": "Srejić",
+      "Email": "srejicmilovan@gmail.com",
+      "Password": "y2+Y0DPZ9l+UtnTkDMfiYg==",
+      "ImagePath": "/Images/milovan_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:17:13.097"
+    },
+    "UserToId": 9,
+    "MessageText": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "DateTimeSend": "2019-10-13T16:58:15.5761651+02:00",
+    "ReadMessage": false
+  },
+  {
+    "$type": "MyWebChat.Models.Message, MyWebChat",
+    "Id": 0,
+    "UserFrom": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 10,
+      "FirstName": "Milos",
+      "LastName": "Srejić",
+      "Email": "milos0604@hotmail.com",
+      "Password": "kbyaWVjY8no=",
+      "ImagePath": "/Images/milos_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:31:09.293"
+    },
+    "UserFromId": 10,
+    "UserTo": {
+      "$type": "MyWebChat.Models.User, MyWebChat",
+      "Id": 9,
+      "FirstName": "Milovan",
+      "LastName": "Srejić",
+      "Email": "srejicmilovan@gmail.com",
+      "Password": "y2+Y0DPZ9l+UtnTkDMfiYg==",
+      "ImagePath": "/Images/milovan_srejic.jpg",
+      "UserRank": "User",
+      "LastLogin": "2019-10-12T15:17:13.097"
+    },
+    "UserToId": 9,
+    "MessageText": "Sta radis miso sta ima u cacku kakav je grad",
+    "DateTimeSend": "2019-10-13T16:58:27.8221049+02:00",
+    "ReadMessage": false
+  }
+]

@@ -1,0 +1,42 @@
+﻿@model MyWebChat.ViewModels.NewRandomViewModel
+@{
+    ViewBag.Title = "Login Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container d-flex justify-content-center mt-5">
+    @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form-login col-11 col-sm-9 col-md-6 col-lg-4 text-center" }))
+    {
+        <h3 class=" text-light text-center font-weight-normal">Sign in</h3>
+
+        <label for="em" class="text-warning mt-3">Your email</label>
+        <input type="email" id="em" name="email" class="form-control py-2 mx-auto" placeholder="Email" />
+
+        <br />
+
+        <label for="pass" class="text-warning">Your password</label>
+        <input type="password" id="pass" name="password" class="form-control py-2 mx-auto" placeholder="Password" />
+
+        <button type="submit" class="btn btn-block btn-signin font-weight-bold mt-5">SIGN IN</button>
+        <hr class="bg-light mt-4" />
+        <button type="button" class="btn btn-block btn-register font-weight-bold mt-4">Register</button>
+    }
+</div>
+<br />
+@if (Session["ErrorMessage"] != null)
+{
+    <div class="container">
+        <div class="row">
+            <div class="alert alert-danger w-100 text-center mx-4 font-weight-bold">@Session["ErrorMessage"]</div>
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script>
+        $(".btn-register").click(function () {
+            window.location.href = "/Register/RegisterPage";
+        });
+    </script>
+}

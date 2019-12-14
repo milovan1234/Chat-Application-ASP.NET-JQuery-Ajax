@@ -1,0 +1,113 @@
+﻿@model MyWebChat.ViewModels.NewRandomViewModel
+@{
+    ViewBag.Title = "Comunications Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool check = false;
+}
+
+<div class="container my-4">
+    <div class="col-12 col-md-8 col-lg-7 comunications-page">
+        <h3 class=" text-light text-center font-weight-normal mb-1">Users</h3>
+        <div class="all-users">
+            @foreach (var user in Model.Users)
+            {
+                check = false;
+                foreach (var actUser in Model.ActiveUsers)
+                {
+                    if (user.Id == actUser.Id)
+                    {
+                        check = true;
+                        break;
+                    }
+                }
+                if (check)
+                {
+                    <div class="row my-3">
+                        <div class="border border-danger p-1 bg-light col-12 col-sm-10 col-lg-8">
+                            <img class="img-responsive user-comunications" src="@user.ImagePath" />
+                            <span class="ml-2 text-success check-active" user-id="@user.Id"><sup><i class="fas fa-circle"></i></sup></span>
+                            <h6 class="font-weight-bold text-dark d-inline mx-2">@user.FirstName @user.LastName</h6>
+                            <div class="float-right">
+                                <span class="badge badge-pill badge-success text-light font-weight-bold mx-2 py-1 px-2 new-messages" user-id="@user.Id" data-toggle="tooltip" data-placement="top" title="New Messages">0</span>
+                                <a href="~/Chat/ChatPage?userToId=@user.Id" class="btn btn-info text-light p-2 mt-1"><i class="fas fa-sms"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="row my-3">
+                        <div class="border border-danger p-1 bg-light col-12 col-sm-10 col-lg-8">
+                            <img class="img-responsive user-comunications" src="@user.ImagePath" />
+                            <span class="ml-2 text-danger check-active" user-id="@user.Id"><sup><i class="fas fa-circle"></i></sup></span>
+                            <h6 class="font-weight-bold text-dark d-inline mx-2">@user.FirstName @user.LastName</h6>
+                            <div class="float-right">
+                                <span class="badge badge-pill badge-success text-light font-weight-bold mx-2 py-1 px-2 new-messages" user-id="@user.Id" data-toggle="tooltip" data-placement="top" title="New Messages">0</span>
+                                <a href="~/Chat/ChatPage?userToId=@user.Id" class="btn btn-info text-light p-2 mt-1"><i class="fas fa-sms"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            function loadUsers() {
+                let url = "@Url.Content("~/")" + "User/ActiveUsers";
+                $.getJSON(url, function (data) {
+                    let check = false;
+                    let allUsers = $(".all-users .check-active");
+                    let activeUsers = [];
+                    $.each(data, function (i, row) {
+                        activeUsers[i] = row.Id;
+                    });
+                    for (let i = 0; i < allUsers.length; i++) {
+                        check = false;
+                        let userId = $(allUsers[i]).attr("user-id");
+                        for (let j = 0; j < activeUsers.length; j++) {
+                            if (userId == activeUsers[j]) {
+                                check = true;
+                                break;
+                            }
+                        }
+                        if (check) {
+                            $(allUsers[i]).removeClass("text-danger");
+                            $(allUsers[i]).addClass("text-success");
+                        }
+                        else {
+                            $(allUsers[i]).removeClass("text-success");
+                            $(allUsers[i]).addClass("text-danger");
+                        }
+                    }
+                });
+            }
+            function loadNewMessages() {
+                let url = "@Url.Content("~/")" + "User/AllUsersMessages";
+                let usersNewM = $(".new-messages");
+                $.getJSON(url, function (data) {
+                     $.each(data, function (i, row) {
+                         for (let i = 0; i < usersNewM.length; i++) {
+                             let userId = $(usersNewM[i]).attr("user-id");
+                             if (userId == row.UserId) {
+                                 $(usersNewM[i]).html(row.CountNewMessages);
+                             }
+                         }
+                    });
+                });
+            }
+            loadNewMessages();
+            loadUsers();
+            setInterval(function () {
+                loadUsers();
+                loadNewMessages();
+            }, 1000);
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        });
+    </script>
+}

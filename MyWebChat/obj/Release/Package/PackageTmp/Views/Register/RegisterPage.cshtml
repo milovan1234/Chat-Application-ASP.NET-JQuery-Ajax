@@ -1,0 +1,42 @@
+﻿@model MyWebChat.ViewModels.NewRandomViewModel
+@{
+    ViewBag.Title = "Register Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container d-flex justify-content-center mt-5">
+    @using (Html.BeginForm("Save", "Register", FormMethod.Post, new { @class = "form-login col-12 col-sm-9 col-md-6 col-lg-5 text-center", @enctype = "multipart/form-data" }))
+    {
+        <h3 class=" text-light text-center font-weight-normal">Register</h3>
+
+        @Html.LabelFor(c => c.User.FirstName, new { @class = "text-center text-warning mt-3" })
+        @Html.TextBoxFor(c => c.User.FirstName, new { @class = "form-control py-2 mx-auto", @placeholder = "First Name" });
+        @Html.ValidationMessageFor(c => c.User.FirstName)
+
+        <br />
+        @Html.LabelFor(c => c.User.LastName, new { @class = "text-center text-warning" })
+        @Html.TextBoxFor(c => c.User.LastName, new { @class = "form-control py-2 mx-auto", @placeholder = "Last Name" });
+        @Html.ValidationMessageFor(c => c.User.LastName)
+
+        <br />
+        @Html.LabelFor(c => c.User.Email, new { @class = "text-center text-warning" })
+        @Html.TextBoxFor(c => c.User.Email, new { @class = "form-control py-2 mx-auto", @placeholder = "E-mail", @type = "email" });
+        @Html.ValidationMessageFor(c => c.User.Email)
+
+        <br />
+        @Html.LabelFor(c => c.User.Password, new { @class = "text-center text-warning" })
+        @Html.PasswordFor(c => c.User.Password, new { @class = "form-control py-2 mx-auto", @placeholder = "Password" });
+        @Html.ValidationMessageFor(c => c.User.Password)
+
+        <input type="file" class="pl-2 py-2 mt-3 text-danger" name="ImageFile" />
+
+        <button type="submit" class="btn btn-block bg-primary font-weight-bold mt-5">Register</button>
+        <hr class="bg-light mt-3" />
+        <button type="button" class="btn btn-block btn-signin-face font-weight-bold mt-3">REGISTER WITH THE FACEBOOK</button>
+    }
+</div>
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

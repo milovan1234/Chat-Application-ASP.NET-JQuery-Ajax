@@ -1,0 +1,20 @@
+﻿@model MyWebChat.ViewModels.NewRandomViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h3>Home Page</h3>
+
+@section scripts
+{
+
+    @if (Session["Register"] != null)
+    {
+        <script>
+            $(document).ready(function () {
+                alert("Successfuly create this account!");
+            });
+        </script>
+        Session["Register"] = null;
+    }
+}

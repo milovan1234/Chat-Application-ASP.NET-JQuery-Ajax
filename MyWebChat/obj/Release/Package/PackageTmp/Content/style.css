@@ -1,0 +1,212 @@
+﻿/*Background home*/
+.img-background {
+    background: url("../Images/rentACar2.jpg");
+    background-size: 100% 100%;
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+    .img-background form {
+        background-color: #292b2c;
+        box-shadow: 0px 0px 10px #FCAA47;
+    }
+/*Navbar*/
+.nav-link {
+    font-size: 17px;
+}
+
+    .nav-link a {
+        color: white !important;
+        text-decoration: none;
+        display: inline-block;
+        transition: color 0.3s;
+    }
+
+        .nav-link a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #FCAA47;
+            transition: width .3s;
+        }
+
+        .nav-link a:hover::after {
+            width: 100%;
+        }
+
+        .nav-link a:hover {
+            color: #FCAA47 !important;
+        }
+
+.img-login {
+    width: 45px;
+    height: 45px;
+}
+
+.dropdown .nav-link {
+    transition: color 0.3s;
+}
+
+    .dropdown .nav-link:hover {
+        color: #fc971d !important;
+    }
+
+.shop-cart a {
+    text-decoration: none;
+}
+/*Login Form*/
+.form-login {
+    background-color: #292b2c;
+    border-radius: 5px;
+    padding: 3rem;
+    box-shadow: 0px 0px 10px #FCAA47;
+    position: relative;
+}
+
+    .form-login input {
+        border-radius: 20px 20px;
+    }
+
+        .form-login input::placeholder {
+            color: #292b2c;
+        }
+
+    .form-login button {
+        border-radius: 20px 20px;
+        background-color: #FCAA47;
+        color: #292b2c;
+    }
+
+    .form-login .btn-signin:hover {
+        background-color: #fc971d;
+    }
+
+    .form-login .btn-register {
+        color: #292b2c;
+        background-color: #DAD6D6;
+    }
+
+        .form-login .btn-register:hover {
+            background-color: #c3bbbb;
+        }
+
+    .form-login .btn-signin-face {
+        background-color: #3C5A99;
+        white-space: normal;
+    }
+
+        .form-login .btn-signin-face:hover {
+            background-color: #324b81;
+        }
+/*Validation Message*/
+.field-validation-error {
+    color: #d9534f !important;
+}
+/*Form Your Profile*/
+.form-yourProfile {
+    background-color: #292b2c;
+    border-radius: 5px;
+    padding: 3rem;
+    box-shadow: 0px 0px 10px #FCAA47;
+    position: relative;
+}
+.form-yourProfile input {
+    border-radius: 20px 20px;
+}
+/*Comunications Page*/
+.comunications-page {
+    background-color: #292b2c;
+    border-radius: 5px;
+    padding: 3rem;
+    box-shadow: 0px 0px 10px #FCAA47;
+    position: relative;
+}
+.user-comunications {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px #3C5A99;
+}
+/*Your Profile Page*/
+.user-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+/*Form Comunications*/
+.form-comunications {
+    background-color: #292b2c;
+    border-radius: 5px;
+    padding: 3em;
+    box-shadow: 0px 0px 10px #FCAA47;
+    position: relative;
+}
+
+.chat-box {
+    height: 350px;
+    overflow-y: auto;
+}
+/*Dropdown chat*/
+.drop {
+    cursor: pointer;
+}
+.drop:hover {
+    color: #d9534f !important;
+}
+.bg-chat {
+    background-color: #DAE5E2;
+}
+/*Chat Message*/
+.img-message {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #d9534f;
+}
+.message-text {
+    border-radius: 20px 20px;
+    max-width: 250px;
+    word-break: break-word;
+    white-space: normal;
+}
+@media screen and (max-width: 576px) {
+    .message-text {
+        border-radius: 20px 20px;
+        max-width: 120px !important;
+        word-break: break-word;
+        white-space: normal;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .message-text {
+        border-radius: 20px 20px;
+        max-width: 170px !important;
+        word-break: break-word;
+        white-space: normal;
+    }
+}
+.time-send {
+    font-size: 10px;
+}
+.three-dots {
+    font-size: 30px;
+}
+.img-send-messages {
+    width: 25px;
+    height: 25px;
+}
+/*View User Profile*/
+.form-view-profile {
+    background-color: #292b2c;
+    border-radius: 5px;
+    padding: 3em;
+    box-shadow: 0px 0px 10px #FCAA47;
+    position: relative;
+}
+.user-profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #d9534f;
+}
